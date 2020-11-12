@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Игра в загадки</title>
+  </head>
+  <body>
+    <button id="settings-btn" class="settings-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+
+    <div id="settings" class="settings">
+      <form id="settings-form">
+        <div>
+          <label for="difficulty">Сложность</label>
+          <select id="difficulty">
+            <option value="easy">Легко</option>
+            <option value="medium">Средне</option>
+            <option value="hard">Трудно</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>👩‍💻 Игра "Отгадай загадку" 👨‍💻</h2>
+      <small>Текущая загадка:</small>
+
+      <h1 id="riddle"></h1>
+
+      <p class="time-container">Времени осталось: <span id="time">20с</span></p>
+
+      <p class="score-container">Правильных ответов: <span id="score">0</span></p>
+
+      <p class="answers-container">Всего попыток: <span id="answers">0</span></p>
+
+      <div id="end-game-container" class="end-game-container"></div>
+
+      <input
+        type="text"
+        id="text"
+        autocomplete="off"
+        placeholder="Введите ответ здесь..."
+      />
+
+      <button class="skip-container" id="skip-container">Пропустить загадку</button>
+
+      <div class="last-answer-container" id="last-answer-container"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
